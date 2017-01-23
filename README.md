@@ -6,7 +6,7 @@ https://github.com/kevinbullock/
 My Github Pages repo can be found at:  
 https://github.com/kevinbullock/kevinbullock.github.io/
 
-I am working on a customized homepage, eventually at:
+I am working on webpage here:
 
 http://kevinbullock.github.io/
 
