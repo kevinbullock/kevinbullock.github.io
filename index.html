@@ -29,7 +29,7 @@
       
     map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
-    layers: ['Ballparks'] 
+    layers: ['ballparks'] 
   });
 
   if (!features.length) {
@@ -39,9 +39,9 @@
   var feature = features[0];
 
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
+    .setLngLat(feature.geometry.lat)
     .setHTML('<h3>' + feature.properties.team + '</h3><p>' + feature.properties.stadium + '</p>')
-    .setLngLat(feature.geometry.coordinates)
+    .setLngLat(feature.geometry.lon)
     .addTo(map);
 });
     </script>
