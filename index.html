@@ -26,6 +26,7 @@
       container: 'map',
       style: 'mapbox://styles/kevinbullock/cj5fjchab2d062sqnt3dn3rcg' 
     });
+      
     map.on('click', function(e) {
   var features = map.queryRenderedFeatures(e.point, {
     layers: ['Ballparks'] 
@@ -38,9 +39,9 @@
   var feature = features[0];
 
   var popup = new mapboxgl.Popup({ offset: [0, -15] })
-    .setLngLat(feature.geometry.coordinates)
-    .setHTML('<h3>' + feature.properties.team + '</h3><p>' + feature.properties.stadium + '</p>')
-    .setLngLat(feature.geometry.coordinates)
+    .setLngLat(lat)
+    .setHTML('<h3>' + team + '</h3><p>' + stadium + '</p>')
+    .setLngLat(lon)
     .addTo(map);
 });
     </script>
